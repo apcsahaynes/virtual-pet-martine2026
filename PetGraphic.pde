@@ -1,5 +1,3 @@
-// =============================================
-//
 // OPTION A: Use Processing graphics
 //   - Write your drawing code inside drawPetGraphic()
 //   - You can make multiple versions (happy, sad, etc.)
@@ -59,12 +57,12 @@ void drawPetGraphic() {
   // or swap it for an image (see Option B below).
 
   // Body
-  fill(170, 210, 255);
+  fill(#DEC196);
   noStroke();
-  ellipse(210, 220, 140, 120);
+  ellipse(210, 220, 120, 160);
 
   // Head
-  fill(170, 210, 255);
+  fill(#E3CDAC);
   ellipse(210, 145, 100, 90);
 
   // Eyes
@@ -78,23 +76,24 @@ void drawPetGraphic() {
   ellipse(235, 134, 5, 5);
 
   // Nose
-  fill(255, 160, 180);
-  ellipse(210, 152, 10, 7);
+  fill(0);
+  triangle(210, 165, 200, 155, 220, 155);
 
   // Mouth
-  noFill();
+  fill(0);
   stroke(80);
   strokeWeight(2);
-  arc(210, 160, 24, 14, 0, PI);
+  arc(197, 162, 24, 30, 0, PI);
+  arc(223, 162, 24, 30, 0, PI);
 
   // Ears
-  fill(170, 210, 255);
+  fill(0);
   noStroke();
-  triangle(178, 108, 168, 75, 195, 100);
-  triangle(242, 108, 252, 75, 225, 100);
+  triangle(145, 108, 168, 75, 195, 100);
+  triangle(275, 108, 252, 75, 225, 100);
 
   // Inner ears
-  fill(255, 180, 200);
+  fill(0);
   triangle(180, 105, 172, 82, 193, 100);
   triangle(240, 105, 248, 82, 227, 100);
 
