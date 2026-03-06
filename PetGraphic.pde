@@ -35,7 +35,7 @@
 
 void drawPetArea() {
   // Background for the pet zone
-  fill(220, 210, 245);
+  fill(#FF74E8);
   stroke(180, 160, 220);
   strokeWeight(2);
   rect(20, 20, 380, 390, 16);
@@ -96,6 +96,49 @@ void drawPetGraphic() {
   fill(0);
   triangle(180, 105, 172, 82, 193, 100);
   triangle(240, 105, 248, 82, 227, 100);
+  
+  // Back Feet
+  fill(#DEC196);
+  ellipse(165, 280, 50, 30);
+  ellipse(255, 280, 50, 30);
+  
+  // Front Feet
+  fill(#E3CDAC);
+  ellipse(180, 270, 50, 30);
+  ellipse(240, 270, 50, 30);
+  
+  // Nails
+  fill(0);
+  ellipse(180, 280, 10, 10);
+  ellipse(165, 275, 10, 10);
+  ellipse(195, 275, 10, 10);
+  ellipse(225, 275, 10, 10);
+  ellipse(240, 280, 10, 10);
+  ellipse(255, 275, 10, 10);
+  
+  // Tail
+  
+  // Draw swirl tail on pet
+  drawTail(266, 240);  // adjust X/Y to place on "butt"
+}
+
+// Swirl tail made from small ellipses
+void drawTail(float tailX, float tailY) {
+  float radius = 5;
+  float angle = 0;
+
+  fill(#E3CDAC);
+  noStroke();
+
+  for (int i = 0; i < 17; i++) {
+    float x = tailX + cos(angle) * radius;
+    float y = tailY + sin(angle) * radius;
+    ellipse(x, y, 8, 8);  // small circle
+    angle += 0.62;          // how tight the curl is
+    radius += 1.5;           // how far outward each circle is
+  }
+}
+  
 
   // ---- END placeholder ----
 
@@ -113,4 +156,3 @@ void drawPetGraphic() {
   //   index = 2; // sad
   // }
   // image(petImages.get(index), 60, 60, 300, 300);
-}
